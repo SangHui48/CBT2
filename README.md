@@ -4,4 +4,4 @@ using
     - npx create-next-app@13.4.12 project name --typescript --tailwind --eslint
 - clerk
 - planetscale
-
+- uploadthing
