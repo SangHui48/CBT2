@@ -61,7 +61,7 @@ export const AttachmentForm = ({
             {!isEditing && (
               <>
                 {initialData.attachments.length === 0 && (
-                    <p className="test-sm mt-2 test-slate-500 italic">
+                    <p className="text-sm mt-2 test-slate-500 italic">
                         No Attachments yet
                     </p>
                 )}              
@@ -78,7 +78,7 @@ export const AttachmentForm = ({
                         }}
                     />
                     <div className="text-xs text-muted-foreground mt-4">
-                        Add anything your students might need to complete the course
+                        Add anything your students might need to complete the course.
                     </div>
                 </div>
             )}

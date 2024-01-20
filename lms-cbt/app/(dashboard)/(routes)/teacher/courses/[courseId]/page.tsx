@@ -9,7 +9,7 @@ import { DescriptionForm } from "./_components/description-form";
 import { ImageForm } from "./_components/image-form";
 import { CategoryForm } from "./_components/category-form";
 import { PriceForm } from "./_components/price-form";
-import { AttachmentForm } from "./_components/\battachment-form";
+import { AttachmentForm } from "./_components/attachment-form";
 
 const CourseIdPage = async ({
     params
