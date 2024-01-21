@@ -29,7 +29,7 @@ export async function POST(
             data: {
                 url,
                 name: url.split("/").pop(),
-                coureseId: params.courseId,
+                courseId: params.courseId,
             }
         });
 

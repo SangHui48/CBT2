@@ -27,12 +27,12 @@ export async function DELETE(
 
         const attachment = await db.attachment.delete({
             where: {
-                coureseId: params.courseId,
+                courseId: params.courseId,
                 id: params.attachmentId,
             }
         });
 
-        return 
+        return NextResponse.json(attachment);
     } catch (error) {
         console.log("ATTACHMENT_ID", error);
         return new NextResponse("Internal Error", { status: 500 });
