@@ -4,7 +4,7 @@ import * as z from "zod";
 import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Pencil, PlusCircle } from "lucide-react";
+import { PlusCircle } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -21,6 +21,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
+import { ChaptersList } from "./chapters-list";
 
 interface ChaptersFormProps {
     initialData: Course & { chapters: Chapter[] };
@@ -38,7 +39,9 @@ export const ChaptersForm = ({
     const [isCreating, setIsCreating] = useState(false);
     const [isUpdating, setIsUpdating] = useState(false);
 
-    const toggleCreating = () => setIsCreating((current) => !current);
+    const toggleCreating = () => {
+        setIsCreating((current) => !current);
+    }
 
     const router = useRouter();
 
@@ -115,7 +118,11 @@ export const ChaptersForm = ({
                     !initialData.chapters.length && "text-slate-500 italic"
                 )}>
                     {!initialData.chapters.length && "No chapters"}
-                    {/* TODO: Add a list of chapters */}
+                    <ChaptersList
+                      onEdit={() => {}}
+                      onReorder={() => {}}
+                      items={initialData.chapters || []}
+                    />
                 </div>
             )}
             {!isCreating && (

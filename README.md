@@ -10,3 +10,5 @@ using
 
 //TODO
 - prisma column 이름 바꾸기 (planetscale에선 column rename을 기본적으로 제공하지 않음) 어떻게 해결해야 하는지
+
+- npm i @hello-pangea/dnd
