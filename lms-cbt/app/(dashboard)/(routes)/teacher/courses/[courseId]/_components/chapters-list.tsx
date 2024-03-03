@@ -47,7 +47,7 @@ export const ChaptersList = ({
         items.splice(result.destination.index, 0, reorderItem);
 
         const startIndex = Math.min(result.source.index, result.destination.index);
-        const endIndex = Math.min(result.source.index, result.destination.index);
+        const endIndex = Math.max(result.source.index, result.destination.index);
 
         const updatedChapters = items.slice(startIndex, endIndex+1);
 
